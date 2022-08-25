@@ -1,6 +1,6 @@
 ### task-manager
 
-🌱 This site was created for fun. ...!
+🌱 This site was created for fun!
 
 # 🛠️ Stack:
 
