@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const { DB_URL } = process.env
 
-const { MongoClient } = require('mongodb')
+const { MongoClient, ObjectId } = require('mongodb')
 
 const connectionURL = `mongodb://${DB_URL}:27017`
 const databaseName = 'task-manager'
@@ -19,25 +19,14 @@ MongoClient.connect(
 
     const db = client.db(databaseName)
 
-    // db.collection('users').findOne(
-    //   { _id: new ObjectID('5c1113239cbfe605241f9071') },
-    //   (error, user) => {
-    //     if (error) {
-    //       return console.log('Unable to fetch')
-    //     }
-
-    //     console.log(user)
-    //   }
-    // )
-
     db.collection('users')
-      .find({ age: 27 })
+      .find({ age: 38 })
       .toArray((error, users) => {
         console.log(users)
       })
 
     db.collection('tasks').findOne(
-      { _id: '5c0fec243ef6bdfbe1d62e2f' },
+      { _id: new ObjectId('630af2a57caa59a3283cfe74') },
       (error, task) => {
         console.log(task)
       }
