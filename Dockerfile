@@ -8,4 +8,4 @@ COPY . .
 
 EXPOSE 3001
 
-CMD ["node", "mongodb.js"]
+CMD ["node", "src/db/mongoose.js"]
