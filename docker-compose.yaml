@@ -12,17 +12,17 @@ services:
     networks:
       - awesome
 
-  app:
-    container_name: app
-    build:
-      context: .
-    ports:
-      - '3001:3001'
-    depends_on:
-      - mongodb
-    restart: always
-    networks:
-      - awesome
+  # app:
+  #   container_name: app
+  #   build:
+  #     context: .
+  #   ports:
+  #     - '3000:3000'
+  #   depends_on:
+  #     - mongodb
+  #   restart: always
+  #   networks:
+  #     - awesome
 
 volumes:
   data-volume:
